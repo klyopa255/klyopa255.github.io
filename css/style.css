@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "ZapfChanceCItalic";
+  src: url("/fonts/ofontruZapfChanceC.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/ofontruZapfChanceC.eot?#iefix") format("embedded-opentype"), url("/fonts/ofontruZapfChanceC.svg") format("svg"), url("/fonts/ofontruZapfChanceC.ttf") format("truetype"), url("/fonts/ofontruZapfChanceC.woff") format("woff"), url("/fonts/ofontruZapfChanceC.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "NautilusPompilius";
+  src: url("/fonts/ofontruNautilusPompilius.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/ofontruNautilusPompilius.eot?#iefix") format("embedded-opentype"), url("/fonts/ofontruNautilusPompilius.svg") format("svg"), url("/fonts/ofontruNautilusPompilius.ttf") format("truetype"), url("/fonts/ofontruNautilusPompilius.woff") format("woff"), url("/fonts/ofontruNautilusPompilius.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "NexaScript-Heavy";
+  src: url("/fonts/ofontruNexaScript.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/ofontruNexaScript.eot?#iefix") format("embedded-opentype"), url("/fonts/ofontruNexaScript.svg") format("svg"), url("/fonts/ofontruNexaScript.ttf") format("truetype"), url("/fonts/ofontruNexaScript.woff") format("woff"), url("/fonts/ofontruNexaScript.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; }
+
+.constructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto; }
+  .constructor__title {
+    width: 100%;
+    text-align: center; }
+  .constructor__settings {
+    width: 45%; }
+  .constructor__type {
+    margin-bottom: 20px; }
+    .constructor__type-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .constructor__type-item {
+      margin-right: 15px; }
+      .constructor__type-item input {
+        display: none; }
+        .constructor__type-item input:checked ~ label {
+          border: 1px solid #000; }
+      .constructor__type-item label {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        width: 116px;
+        height: 78px;
+        border: 1px solid #ccc; }
+        .constructor__type-item label[for=together] {
+          background: url("/img/detail-type1.jpg") center no-repeat; }
+        .constructor__type-item label[for=apart] {
+          background: url("/img/detail-type2.jpg") center no-repeat; }
+  .constructor__value {
+    position: relative;
+    padding-top: 20px; }
+    .constructor__value-input {
+      font-size: 16px;
+      line-height: 1.4em;
+      padding: 10px 15px; }
+      .constructor__value-input:focus ~ label {
+        top: 0;
+        left: 0; }
+    .constructor__value-label {
+      position: absolute;
+      top: 36px;
+      left: 16px;
+      font-size: 14px;
+      line-height: 16px;
+      cursor: text;
+      -webkit-transition: top 0.4s, left 0.4s;
+      transition: top 0.4s, left 0.4s; }
+      .constructor__value-label--top {
+        top: 0;
+        left: 0; }
+  .constructor__font-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .constructor__font-item input {
+    display: none; }
+    .constructor__font-item input:checked ~ label {
+      border: 1px solid #000; }
+  .constructor__font-item label {
+    display: block;
+    width: 80px;
+    font-size: 60px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center; }
+    .constructor__font-item label[for=zapf] {
+      font-family: 'ZapfChanceCItalic'; }
+    .constructor__font-item label[for=nautilus] {
+      font-family: 'NautilusPompilius'; }
+    .constructor__font-item label[for=nexa] {
+      font-family: 'NexaScript-Heavy'; }
+  .constructor__material {
+    margin: 20px 0; }
+    .constructor__material-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .constructor__material-item input {
+      display: none; }
+      .constructor__material-item input:checked ~ label {
+        color: #fff;
+        background-color: #000; }
+    .constructor__material-item label {
+      display: block;
+      margin: 0;
+      padding: 10px 15px;
+      color: #000;
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 20px;
+      margin-right: 15px; }
+  .constructor__gold-type {
+    margin: 20px 0; }
+    .constructor__gold-type-list {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .constructor__gold-type-item {
+      margin-bottom: 10px; }
+      .constructor__gold-type-item input {
+        display: none; }
+        .constructor__gold-type-item input:checked ~ label:after {
+          position: absolute;
+          content: '';
+          left: 1.5px;
+          top: 50%;
+          margin-top: -14px;
+          width: 25px;
+          height: 25px;
+          border: 1px solid #000;
+          border-radius: 50%; }
+      .constructor__gold-type-item label {
+        display: block;
+        position: relative;
+        font-size: 18px;
+        line-height: 1.5em;
+        padding-left: 45px; }
+        .constructor__gold-type-item label[for='yellow']:before {
+          background-color: #d1b574; }
+        .constructor__gold-type-item label:before {
+          position: absolute;
+          content: '';
+          top: 50%;
+          margin-top: -10px;
+          left: 5px;
+          width: 20px;
+          height: 20px;
+          background-color: #cecece;
+          border-radius: 50%; }
+  .constructor__covering {
+    margin: 20px 0; }
+    .constructor__covering-list {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .constructor__covering-item {
+      margin-bottom: 10px; }
+      .constructor__covering-item input {
+        display: none; }
+        .constructor__covering-item input:checked ~ label:after {
+          position: absolute;
+          content: '';
+          left: 1.5px;
+          top: 50%;
+          margin-top: -14px;
+          width: 25px;
+          height: 25px;
+          border: 1px solid #000;
+          border-radius: 50%; }
+      .constructor__covering-item label {
+        display: block;
+        position: relative;
+        font-size: 18px;
+        line-height: 1.5em;
+        padding-left: 45px; }
+        .constructor__covering-item label[for='golden']:before {
+          background-color: #d1b574; }
+        .constructor__covering-item label:before {
+          position: absolute;
+          content: '';
+          top: 50%;
+          margin-top: -10px;
+          left: 5px;
+          width: 20px;
+          height: 20px;
+          background-color: #cecece;
+          border-radius: 50%; }
+  .constructor__result {
+    width: 45%; }
+    .constructor__result-title {
+      text-align: center;
+      width: 100%; }
+    .constructor__result-together {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .constructor__result-together-container {
+        display: inline-block;
+        position: relative;
+        height: 140px;
+        margin: auto;
+        padding: 0 43px; }
+    .constructor__result-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 43px; }
+      .constructor__result-image--right {
+        left: initial;
+        right: 0;
+        -webkit-transform: scale(-1, 1);
+                transform: scale(-1, 1); }
+      .constructor__result-image--top {
+        position: initial;
+        width: 100%;
+        -webkit-transform: rotate(1.5deg);
+                transform: rotate(1.5deg); }
+        .constructor__result-image--top img {
+          width: 100%;
+          height: auto; }
+    .constructor__result-string {
+      font-size: 46px;
+      margin-top: 89px;
+      color: #aaa; }
+      .constructor__result-string--zapf {
+        font-family: 'ZapfChanceCItalic'; }
+      .constructor__result-string--nautilus {
+        font-family: 'NautilusPompilius'; }
+      .constructor__result-string--nexa {
+        font-family: 'NexaScript-Heavy'; }
+      .constructor__result-string--gold {
+        color: #d1c378; }
+    .constructor__result-apart-container {
+      width: 400px;
+      margin: 0 auto; }
+    .constructor__result-apart-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 80%;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      margin: 0 auto;
+      margin-top: -3px;
+      padding: 0;
+      list-style: none; }
+    .constructor__result-apart-item {
+      position: relative;
+      padding-top: 7px;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      line-height: 1em;
+      text-align: center;
+      color: #aaa;
+      vertical-align: top;
+      text-transform: uppercase; }
+      .constructor__result-apart-item:before {
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background: url("/img/image_necklace-apart-silver-part.png") center no-repeat;
+        background-size: cover; }
+      .constructor__result-apart-item--zapf {
+        font-family: 'ZapfChanceCItalic'; }
+      .constructor__result-apart-item--nautilus {
+        font-family: 'NautilusPompilius'; }
+      .constructor__result-apart-item--nexa {
+        font-family: 'NexaScript-Heavy'; }
+      .constructor__result-apart-item--gold {
+        color: #d1c378; }
+        .constructor__result-apart-item--gold:before {
+          background: url("/img/image_necklace-apart-gold-part.png") center no-repeat;
+          background-size: cover; }
+      .constructor__result-apart-item--top2 {
+        margin-top: -2px; }
+      .constructor__result-apart-item--top3 {
+        margin-top: -3px; }
+      .constructor__result-apart-item--top5 {
+        margin-top: -5px; }
+      .constructor__result-apart-item--top4 {
+        margin-top: -4px; }
+      .constructor__result-apart-item--top8 {
+        margin-top: -8px; }
+      .constructor__result-apart-item--top10 {
+        margin-top: -10px; }
+      .constructor__result-apart-item--top11 {
+        margin-top: -11px; }
+      .constructor__result-apart-item--top13 {
+        margin-top: -13px; }
+      .constructor__result-apart-item--top14 {
+        margin-top: -14px; }
+      .constructor__result-apart-item--top15 {
+        margin-top: -15px; }
+      .constructor__result-apart-item--top19 {
+        margin-top: -19px; }
+      .constructor__result-apart-item--top21 {
+        margin-top: -21px; }
+      .constructor__result-apart-item--top22 {
+        margin-top: -22px; }
+
+/*# sourceMappingURL=style.css.map */

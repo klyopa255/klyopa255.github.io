@@ -1,77 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page  no-js" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>klyopa255 | GP</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Главная</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
-<body>
-  <a href="mailto:klyopa323@gmail.com">klyopa255</a>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      height: 100vh;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10vw;
-      line-height: 15vw;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(87, 233, 79);
-    }
-
-    a {
-      color: #b6f889;
-      margin: auto;
-      background: transparent;
-      box-shadow: 0 0 10vw 15vw rgb(149, 241, 131), inset 0 0 10vw 5vw rgb(149, 241, 131);
-      user-select: none;
-      text-decoration: none;
-      position: relative;
-      left: 0;
-      text-shadow:
-        1px 1px 0px #c4dbe2,
-        2px 2px 0px #b4d1d9,
-        3px 3px 0px #a6c6cf,
-        4px 4px 0px #94b8c3,
-        5px 5px 0px #87aeb9,
-        6px 6px 0px #7aa3af,
-        7px 7px 0px #6d97a3,
-        8px 8px 0px #618b98,
-        9px 9px 0px #56818e,
-        10px 10px 0px #4c7683,
-        15px 15px 25px rgba(0, 0, 0, .9);
-      transition: .5s ease-in-out;
-    }
-
-    a:hover {
-      left: 20px;
-      text-shadow:
-        -1px 1px 0px #c4dbe2,
-        -2px 2px 0px #b4d1d9,
-        -3px 3px 0px #a6c6cf,
-        -4px 4px 0px #94b8c3,
-        -5px 5px 0px #87aeb9,
-        -6px 6px 0px #7aa3af,
-        -7px 7px 0px #6d97a3,
-        -8px 8px 0px #618b98,
-        -9px 9px 0px #56818e,
-        -10px 10px 0px #4c7683,
-        -15px 15px 25px rgba(0, 0, 0, .9);
-    }
-  </style>
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page__inner">
+    <div class="page__content">
+      <p>Шапка</p>
+      <section class="constructor" id="app">
+        <h2 class="constructor__title">{{ title }}</h2>
+        <div class="constructor__settings">
+          <div class="constructor__type">
+            <ul class="constructor__type-list">
+              <li class="constructor__type-item"><input type="radio" id="together" name="consructor-type" value="together" v-model="constructorType"><label for="together">Слитно</label></li>
+              <li class="constructor__type-item"><input type="radio" id="apart" name="consructor-type" value="apart" v-model="constructorType"><label for="apart">По букве</label></li>
+            </ul>
+          </div>
+          <div class="constructor__value"><input class="constructor__value-input" type="text" id="constructor-content" maxlength="10" v-model="constructorValue" @input="onInputValue($el, $event)"><label class="constructor__value-label" for="constructor-content" :class="{ 'constructor__value-label--top': constructorCurrentValue }">Напишите Ваше слово</label>
+            <p class="constructor__value-prompt"><span>Осталось</span><span> {{ constructorLeftValue }}</span><span> символов из</span><span> {{ constructorMaxValue }}</span></p>
+          </div>
+          <div class="constructor__font">
+            <ul class="constructor__font-list">
+              <li class="constructor__font-item"><input type="radio" id="zapf" name="constructor-font" value="zapf" v-model="constructorFont"><label for="zapf">А</label></li>
+              <li class="constructor__font-item"><input type="radio" id="nautilus" name="constructor-font" value="nautilus" v-model="constructorFont"><label for="nautilus">А</label></li>
+              <li class="constructor__font-item"><input type="radio" id="nexa" name="constructor-font" value="nexa" v-model="constructorFont"><label for="nexa">А</label></li>
+            </ul>
+          </div>
+          <div class="constructor__material">
+            <ul class="constructor__material-list">
+              <li class="constructor__material-item"><input type="radio" id="silver" name="constructor-material" value="silver" v-model="constructorMaterial"><label for="silver">Серебро</label></li>
+              <li class="constructor__material-item"><input type="radio" id="gold" name="constructor-material" value="gold" v-model="constructorMaterial"><label for="gold">Золото</label></li>
+            </ul>
+          </div>
+          <div class="constructor__gold-type" v-if="constructorMaterial==='gold'">
+            <ul class="constructor__gold-type-list">
+              <li class="constructor__gold-type-item"><input type="radio" id="yellow" name="constructor-gold-type" value="yellow" v-model="constructorGoldType"><label for="yellow">Желтое</label></li>
+              <li class="constructor__gold-type-item"><input type="radio" id="white" name="constructor-gold-type" value="white" v-model="constructorGoldType"><label for="white">Белое</label></li>
+            </ul>
+          </div>
+          <div class="constructor__covering" v-if="constructorMaterial==='silver'">
+            <ul class="constructor__covering-list">
+              <li class="constructor__covering-item"><input type="radio" id="without" name="constructor-covering" value="without" v-model="constructorCovering"><label for="without">Без покрытия</label></li>
+              <li class="constructor__covering-item"><input type="radio" id="rodii" name="constructor-covering" value="rodii" v-model="constructorCovering"><label for="rodii">Родий</label></li>
+              <li class="constructor__covering-item"><input type="radio" id="golden" name="constructor-covering" value="golden" v-model="constructorCovering"><label for="golden">Позолота</label></li>
+            </ul>
+          </div><button @click="printData">Дату мне!</button>
+        </div>
+        <div class="constructor__result">
+          <div class="constructor__result-together" v-if="constructorType==='together'">
+            <h2 class="constructor__result-title">Together</h2>
+            <div class="constructor__result-together-container">
+              <div class="constructor__result-image constructor__result-image--left"><img :src="imgSrc()" alt=""></div>
+              <div class="constructor__result-image constructor__result-image--right"><img :src="imgSrc()" alt=""></div>
+              <p class="constructor__result-string" :class="resultFontClass('constructor__result-string')">{{ constructorValue || 'петя' }}</p>
+            </div>
+          </div>
+          <div class="constructor__result-together" v-if="constructorType==='apart'">
+            <h2 class="constructor__result-title">Apart</h2>
+            <div class="constructor__result-apart-container">
+              <div class="constructor__result-image constructor__result-image--top"><img :src="imgSrc()" alt=""></div>
+              <ul class="constructor__result-apart-list">
+                <li class="constructor__result-apart-item" v-for="item in consructorApartArray" :class="[resultFontClass('constructor__result-apart-item'), item.class]">{{ item.value }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        var app = new Vue({
+          el: '#app',
+          data: {
+            title: 'Создайте свою подвеску',
+            constructorType: 'together',
+            constructorFont: 'zapf',
+            constructorMaterial: 'silver',
+            constructorCovering: 'without',
+            constructorGoldType: 'yellow',
+            constructorValue: '',
+            constructorMaxValue: 10,
+            constructorCurrentValue: 0,
+            constructorLeftValue: 10,
+            consructorApartArray: [{
+                value: 'п',
+                class: 'constructor__result-apart-item--top15'
+              },
+              {
+                value: 'е',
+                class: 'constructor__result-apart-item--top2'
+              },
+              {
+                value: 'т',
+                class: 'constructor__result-apart-item--top2'
+              },
+              {
+                value: 'я',
+                class: 'constructor__result-apart-item--top15'
+              },
+            ]
+          },
+          methods: {
+            printData: function(event) {
+              console.log(this);
+            },
+            onInputValue: function(el, event) {
+              this.constructorCurrentValue = event.target.value.length;
+              this.constructorLeftValue = this.constructorMaxValue - this.constructorCurrentValue;
+              console.log(event.target.value.length);
+              if (event.target.value.length === 0) {
+                this.consructorApartArray = [{
+                    value: 'п',
+                    class: 'constructor__result-apart-item--top15'
+                  },
+                  {
+                    value: 'е',
+                    class: 'constructor__result-apart-item--top2'
+                  },
+                  {
+                    value: 'т',
+                    class: 'constructor__result-apart-item--top2'
+                  },
+                  {
+                    value: 'я',
+                    class: 'constructor__result-apart-item--top15'
+                  },
+                ];
+              } else {
+                let splitArray = this.constructorValue.split('');
+                let consructorApartArray = [];
+                splitArray.forEach(function(el, i, arr) {
+                  consructorApartArray.push({
+                    value: el
+                  });
+                });
+                if (consructorApartArray.length === 2) {
+                  consructorApartArray.forEach(function(el) {
+                    el.class = 'constructor__result-apart-item--top10';
+                  });
+                } else if (consructorApartArray.length === 3) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 2)) {
+                      el.class = 'constructor__result-apart-item--top14';
+                    }
+                  });
+                } else if (consructorApartArray.length === 4) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 3)) {
+                      el.class = 'constructor__result-apart-item--top15';
+                    } else {
+                      el.class = 'constructor__result-apart-item--top2';
+                    }
+                  });
+                } else if (consructorApartArray.length === 5) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 4)) {
+                      el.class = 'constructor__result-apart-item--top19';
+                    } else if ((i === 1) || (i === 3)) {
+                      el.class = 'constructor__result-apart-item--top5';
+                    }
+                  });
+                } else if (consructorApartArray.length === 6) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 5)) {
+                      el.class = 'constructor__result-apart-item--top19';
+                    } else if ((i === 1) || (i === 4)) {
+                      el.class = 'constructor__result-apart-item--top5';
+                    }
+                  });
+                } else if (consructorApartArray.length === 7) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 6)) {
+                      el.class = 'constructor__result-apart-item--top19';
+                    } else if ((i === 1) || (i === 5)) {
+                      el.class = 'constructor__result-apart-item--top8';
+                    }
+                  });
+                } else if (consructorApartArray.length === 8) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 7)) {
+                      el.class = 'constructor__result-apart-item--top21';
+                    } else if ((i === 1) || (i === 6)) {
+                      el.class = 'constructor__result-apart-item--top11';
+                    } else if ((i === 2) || (i === 5)) {
+                      el.class = 'constructor__result-apart-item--top4';
+                    }
+                  });
+                } else if (consructorApartArray.length === 9) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 8)) {
+                      el.class = 'constructor__result-apart-item--top22';
+                    } else if ((i === 1) || (i === 7)) {
+                      el.class = 'constructor__result-apart-item--top11';
+                    } else if ((i === 2) || (i === 6)) {
+                      el.class = 'constructor__result-apart-item--top4';
+                    }
+                  });
+                } else if (consructorApartArray.length === 10) {
+                  consructorApartArray.forEach(function(el, i) {
+                    if ((i === 0) || (i === 9)) {
+                      el.class = 'constructor__result-apart-item--top22';
+                    } else if ((i === 1) || (i === 8)) {
+                      el.class = 'constructor__result-apart-item--top13';
+                    } else if ((i === 2) || (i === 7)) {
+                      el.class = 'constructor__result-apart-item--top8';
+                    }
+                  });
+                }
+                this.consructorApartArray = consructorApartArray;
+              }
+            },
+            imgSrc: function() {
+              if (this.constructorType === 'together') {
+                if (
+                  (this.constructorMaterial === 'gold' && this.constructorGoldType === 'yellow') ||
+                  (this.constructorMaterial === 'silver' && this.constructorCovering === 'golden')
+                ) {
+                  return '/img/image_necklace-gold.png';
+                } else {
+                  return '/img/image_necklace-silver.png';
+                }
+              } else {
+                if (
+                  (this.constructorMaterial === 'gold' && this.constructorGoldType === 'yellow') ||
+                  (this.constructorMaterial === 'silver' && this.constructorCovering === 'golden')
+                ) {
+                  return '/img/image_necklace-apart-gold.png';
+                } else {
+                  return '/img/image_necklace-apart-silver.png';
+                }
+              }
+            },
+            resultFontClass: function(parentClass) {
+              let className = '';
+              if (this.constructorFont === 'zapf') {
+                className += parentClass + '--zapf';
+              } else if (this.constructorFont === 'nautilus') {
+                className += parentClass + '--nautilus';
+              } else if (this.constructorFont === 'nexa') {
+                className += parentClass + '--nexa';
+              }
+              if (
+                (this.constructorMaterial === 'gold' && this.constructorGoldType === 'yellow') ||
+                (this.constructorMaterial === 'silver' && this.constructorCovering === 'golden')
+              ) {
+                className += ' ' + parentClass + '--gold';
+              }
+              return className;
+            }
+          }
+        })
+      </script>
+    </div>
+    <div class="page__footer-wrapper">
+      <p>Подвал</p>
+    </div>
+  </div>
+  <script src="js/vendors.min.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
