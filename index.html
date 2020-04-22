@@ -18,14 +18,14 @@
       <p>Шапка</p>
       <section class="constructor" id="app">
         <h2 class="constructor__title">{{ title }}</h2>
-        <div class="constructor__settings">
+        <form class="constructor__settings" @change="onFormChange($el, $event)">
           <div class="constructor__type">
             <ul class="constructor__type-list">
               <li class="constructor__type-item"><input type="radio" id="together" name="consructor-type" value="together" v-model="constructorType"><label for="together">Слитно</label></li>
               <li class="constructor__type-item"><input type="radio" id="apart" name="consructor-type" value="apart" v-model="constructorType"><label for="apart">По букве</label></li>
             </ul>
           </div>
-          <div class="constructor__value"><input class="constructor__value-input" type="text" id="constructor-content" maxlength="10" v-model="constructorValue" @input="onInputValue($el, $event)"><label class="constructor__value-label" for="constructor-content" :class="{ 'constructor__value-label--top': constructorCurrentValue }">Напишите Ваше слово</label>
+          <div class="constructor__value"><input class="constructor__value-input" type="text" id="constructor-content" maxlength="10" v-model="constructorValue" @input="onFormChange($el, $event)"><label class="constructor__value-label" for="constructor-content" :class="{ 'constructor__value-label--top': constructorCurrentValue }">Напишите Ваше слово</label>
             <p class="constructor__value-prompt"><span>Осталось</span><span> {{ constructorLeftValue }}</span><span> символов из</span><span> {{ constructorMaxValue }}</span></p>
           </div>
           <div class="constructor__font">
@@ -49,12 +49,11 @@
           </div>
           <div class="constructor__covering" v-if="constructorMaterial==='silver'">
             <ul class="constructor__covering-list">
-              <li class="constructor__covering-item"><input type="radio" id="without" name="constructor-covering" value="without" v-model="constructorCovering"><label for="without">Без покрытия</label></li>
-              <li class="constructor__covering-item"><input type="radio" id="rodii" name="constructor-covering" value="rodii" v-model="constructorCovering"><label for="rodii">Родий</label></li>
-              <li class="constructor__covering-item"><input type="radio" id="golden" name="constructor-covering" value="golden" v-model="constructorCovering"><label for="golden">Позолота</label></li>
+              <li class="constructor__covering-item"><input type="checkbox" id="fianits" name="constructor-fianits" v-model="constructorFianits"><label for="fianits">Посыпать фианитами<a class="constructor__popup-link" href="#" @click.pevent="popup"> Как это выглядит?</a></label></li>
             </ul>
-          </div><button @click="printData">Дату мне!</button>
-        </div>
+          </div>
+          <!--button(@click.prevent='printData') Дату мне!-->
+        </form>
         <div class="constructor__result">
           <div class="constructor__result-together" v-if="constructorType==='together'">
             <h2 class="constructor__result-title">Together</h2>
@@ -73,6 +72,10 @@
               </ul>
             </div>
           </div>
+          <p class="constructor__result-price">{{ constructorPrice }} рублясиков</p>
+        </div>
+        <div class="constructor__popup" :class="{'constructor__popup--active': constructorIsPopupActive}"><span class="constructor__popup-button" @click.pevent="popup">+</span>
+          <div class="constructor__popup-img"><img src="/img/yeahHell.png" alt=""></div>
         </div>
       </section>
       <script>
@@ -84,11 +87,19 @@
             constructorFont: 'zapf',
             constructorMaterial: 'silver',
             constructorCovering: 'without',
+            constructorFianits: false,
             constructorGoldType: 'yellow',
             constructorValue: '',
             constructorMaxValue: 10,
             constructorCurrentValue: 0,
             constructorLeftValue: 10,
+            constructorPrice: 3500,
+            constructorChanePrice: 500,
+            constructorSilverBasePrice: 3500,
+            constructorSilverAddPerCountPrice: 500,
+            constructorFianitBasePrice: 1500,
+            constructorFianitAddPerCountPrice: 500,
+            constructorIsPopupActive: false,
             consructorApartArray: [{
                 value: 'п',
                 class: 'constructor__result-apart-item--top15'
@@ -111,11 +122,10 @@
             printData: function(event) {
               console.log(this);
             },
-            onInputValue: function(el, event) {
+            onFormChange: function(el, event) {
               this.constructorCurrentValue = event.target.value.length;
               this.constructorLeftValue = this.constructorMaxValue - this.constructorCurrentValue;
-              console.log(event.target.value.length);
-              if (event.target.value.length === 0) {
+              if (this.constructorValue.length === 0) {
                 this.consructorApartArray = [{
                     value: 'п',
                     class: 'constructor__result-apart-item--top15'
@@ -216,6 +226,7 @@
                 }
                 this.consructorApartArray = consructorApartArray;
               }
+              this.calculatePrice();
             },
             imgSrc: function() {
               if (this.constructorType === 'together') {
@@ -254,6 +265,36 @@
                 className += ' ' + parentClass + '--gold';
               }
               return className;
+            },
+            calculatePrice: function() {
+              this.constructorPrice = 0;
+              if (this.constructorMaterial === 'gold') {
+                this.constructorPrice = 'неизвестно сколько';
+              }
+              if (this.constructorMaterial === 'silver') {
+                this.constructorPrice = this.constructorSilverBasePrice;
+                if (this.constructorValue.length > 5) {
+                  this.constructorPrice += this.constructorSilverAddPerCountPrice;
+                }
+                if (this.constructorValue.length > 8) {
+                  this.constructorPrice += this.constructorSilverAddPerCountPrice;
+                }
+                if (this.constructorType === 'apart') {
+                  this.constructorPrice += this.constructorSilverAddPerCountPrice;
+                }
+                if (this.constructorFianits) {
+                  this.constructorPrice += this.constructorFianitBasePrice;
+                  if (this.constructorValue.length > 5) {
+                    this.constructorPrice += this.constructorFianitAddPerCountPrice;
+                  }
+                  if (this.constructorValue.length > 8) {
+                    this.constructorPrice += this.constructorFianitAddPerCountPrice;
+                  }
+                }
+              }
+            },
+            popup: function() {
+              this.constructorIsPopupActive = !this.constructorIsPopupActive;
             }
           }
         })
