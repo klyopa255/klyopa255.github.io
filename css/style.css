@@ -449,6 +449,12 @@ body {
   .content-section__text {
     width: 80%; } }
 
+@media (max-width: 480px) {
+  .content-section__media {
+    width: 100%; }
+  .content-section__text {
+    width: 100%; } }
+
 .cards {
   margin-bottom: 90px; }
   .cards__container {
