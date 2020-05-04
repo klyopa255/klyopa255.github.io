@@ -65,7 +65,7 @@ body {
   right: 0;
   width: 100%;
   padding: 50px 0 0;
-  z-index: 2; }
+  z-index: 3; }
   .header--black {
     background-color: rgba(0, 0, 0, 0.4);
     color: #000; }
@@ -305,13 +305,15 @@ body {
     margin-right: 0; } }
 
 .heading {
+  position: relative;
   background-color: green;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
   margin-bottom: 70px;
-  padding: 396px 0 85px; }
+  padding: 396px 0 85px;
+  z-index: 2; }
   .heading--inner {
     padding-bottom: 40px; }
   .heading__container {
@@ -350,7 +352,9 @@ body {
     .heading__title {
       font-size: 2vw; }
     .heading__promo {
-      font-size: 5vw; } }
+      font-size: 5vw; }
+    .heading--inner {
+      padding-bottom: 20px; } }
 
 @media (max-width: 480px) {
   .heading {
@@ -358,7 +362,9 @@ body {
     .heading__title {
       font-size: 4vw; }
     .heading__promo {
-      font-size: 8vw; } }
+      font-size: 8vw; }
+    .heading--inner {
+      padding-bottom: 20px; } }
 
 .content-section {
   margin-bottom: 75px; }
@@ -623,6 +629,20 @@ body {
   .slider-section--white-background {
     background-color: #fff; }
 
+@media (max-width: 1300px) {
+  .slider-section__list {
+    padding-bottom: 75px; }
+    .slider-section__list--noslider {
+      padding-bottom: 0; } }
+
+@media (max-width: 768px) {
+  .slider-section__item--noslider {
+    width: 48%; } }
+
+@media (max-width: 480px) {
+  .slider-section__item--noslider {
+    width: 100%; } }
+
 .team__container {
   max-width: 1170px;
   margin: 0 auto;
@@ -660,6 +680,34 @@ body {
   font-size: 19px;
   margin-top: 0;
   color: #4a4a4a; }
+
+.team__togather img {
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 1200px) {
+  .team__item {
+    width: 32%; }
+  .team__name {
+    font-size: 2vw; }
+  .team__spec {
+    font-size: 1.6vw; } }
+
+@media (max-width: 768px) {
+  .team__item {
+    width: 48%; }
+  .team__name {
+    font-size: 3vw; }
+  .team__spec {
+    font-size: 2.6vw; } }
+
+@media (max-width: 480px) {
+  .team__item {
+    width: 100%; }
+  .team__name {
+    font-size: 5vw; }
+  .team__spec {
+    font-size: 3vw; } }
 
 .contact__container {
   max-width: 1170px;
@@ -718,5 +766,28 @@ body {
   padding: 10px 20px;
   outline: none;
   margin-bottom: 25px; }
+
+@media (max-width: 768px) {
+  .contact form {
+    width: 100%; } }
+
+.fix-button {
+  position: fixed;
+  right: -71px;
+  top: 50%;
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 18px;
+  color: #849343;
+  padding: 20px;
+  border: 1px solid #849343;
+  border-bottom: none;
+  text-decoration: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  z-index: 1; }
+
+@media (max-width: 1270px) {
+  .fix-button {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
