@@ -480,6 +480,10 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .cards__item {
+    width: 360px;
+    background-color: #f6f6f6;
+    padding-top: 25px; }
+  .cards__link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -487,9 +491,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 360px;
-    background-color: #f6f6f6;
-    padding-top: 25px; }
+    text-decoration: none; }
   .cards__img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -714,6 +716,10 @@ body {
   margin: 0 auto;
   padding: 0 15px; }
 
+.contact__title {
+  font-family: "Roboto-Light", sans-serif;
+  text-align: center; }
+
 .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,9 +773,15 @@ body {
   outline: none;
   margin-bottom: 25px; }
 
+.contact--popup form {
+  width: 455px;
+  margin: 0 auto; }
+
 @media (max-width: 768px) {
   .contact form {
-    width: 100%; } }
+    width: 100%; }
+  .contact--popup form {
+    width: 90%; } }
 
 .fix-button {
   position: fixed;
@@ -789,5 +801,56 @@ body {
 @media (max-width: 1270px) {
   .fix-button {
     display: none; } }
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4; }
+  .popup__overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); }
+  .popup__container {
+    position: absolute;
+    width: 600px;
+    top: 20%;
+    left: 50%;
+    margin-left: -300px;
+    padding: 50px 0 40px;
+    background-color: #fff;
+    border: 2px solid #849343; }
+  .popup__close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer; }
+    .popup__close::before, .popup__close::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      top: 17px;
+      left: 0;
+      background-color: #849343;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .popup__close::after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  .popup--active {
+    display: block; }
+
+@media (max-width: 768px) {
+  .popup__container {
+    width: 90%;
+    top: 5%;
+    margin-left: -45vw; } }
 
 /*# sourceMappingURL=style.css.map */

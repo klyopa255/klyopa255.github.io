@@ -69,7 +69,7 @@
               <div class="slider-section__img"><img src="/img/black-bottles2.png" alt=""></div>
               <h3 class="slider-section__item-title slider-section__item-title--noslider">CBG Oils</h3>
             </li>
-          </ul><a class="slider-section__link link" href="#">Ask for more details</a>
+          </ul><a class="slider-section__link link popup-link" href="#">Ask for more details</a>
         </div>
       </section>
       <section class="slider-section">
@@ -118,7 +118,7 @@
             <div class="content-section__media"><img src="/img/lab.jpg" alt=""></div>
             <div class="content-section__text">
               <p class="content-section__text-bold">We strive to improve life by utilising nature’s secret ingredients and making organic CBD products of the highest quality accessible to everyone</p>
-              <p class="content-section__text-default">Growing up with alpine mountain landscape and crystal-clear lakes, we see ourselves as children of nature. From an early age we had a close relationship with our land and agriculture. The regular visits to the farm have taught us the importance of taking care of nature. This is why we stand for organic and sustainable cultivation</p><a class="content-section__link link" href="#">more details</a>
+              <p class="content-section__text-default">Growing up with alpine mountain landscape and crystal-clear lakes, we see ourselves as children of nature. From an early age we had a close relationship with our land and agriculture. The regular visits to the farm have taught us the importance of taking care of nature. This is why we stand for organic and sustainable cultivation</p><a class="content-section__link link popup-link" href="#">more details</a>
             </div>
           </div>
         </div>
@@ -152,7 +152,23 @@
         </div>
       </footer>
     </div>
-  </div><a class="fix-button" href="#" id="fix-button">Ask for more details</a>
+  </div><a class="fix-button popup-link" href="#" id="fix-button">Ask for more details</a>
+  <div class="popup" id="popup">
+    <div class="popup__overlay">
+      <div class="popup__container">
+        <div class="popup__close" id="popup-close"></div>
+        <div class="contact contact--popup">
+          <h2 class="contact__title">Ask for more details</h2>
+          <form action="#"><input id="name" type="text" name="name" placeholder="Name*"><input id="email" type="text" name="email" placeholder="E-mail*"><select id="subject">
+              <option value="0" disabled selected>Subject*</option>
+              <option value="1">Example 1</option>
+              <option value="2">Example 2</option>
+              <option value="3">Example 3</option>
+            </select><textarea id="message" name="message" cols="30" rows="5" placeholder="Message*"></textarea><input type="submit" value="Send"></form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="/plugins/jquery/jquery-3.5.0.min.js"></script>
   <script src="/plugins/owl/owl.carousel.min.js"></script>
   <script src="js/vendors.min.js"></script>

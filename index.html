@@ -54,18 +54,18 @@
       <section class="cards">
         <div class="cards__container">
           <ul class="cards__list">
-            <li class="cards__item">
-              <div class="cards__img"><img src="/img/bottles.png" alt=""></div>
-              <h3 class="cards__title">Wholesale</h3>
-            </li>
-            <li class="cards__item">
-              <div class="cards__img"><img src="/img/bottles2.png" alt=""></div>
-              <h3 class="cards__title">White/private label</h3>
-            </li>
-            <li class="cards__item">
-              <div class="cards__img"><img src="/img/maria.png" alt=""></div>
-              <h3 class="cards__title">Bulk</h3>
-            </li>
+            <li class="cards__item"><a class="cards__link" href="/wholesale.html">
+                <div class="cards__img"><img src="/img/bottles.png" alt=""></div>
+                <h3 class="cards__title">Wholesale</h3>
+              </a></li>
+            <li class="cards__item"><a class="cards__link" href="/private-label.html">
+                <div class="cards__img"><img src="/img/bottles2.png" alt=""></div>
+                <h3 class="cards__title">White/private label</h3>
+              </a></li>
+            <li class="cards__item"><a class="cards__link" href="/bulk.html">
+                <div class="cards__img"><img src="/img/maria.png" alt=""></div>
+                <h3 class="cards__title">Bulk</h3>
+              </a></li>
           </ul>
         </div>
       </section>
@@ -75,7 +75,7 @@
           <div class="content-section__flex-container">
             <div class="content-section__media"><img src="/img/rails.jpg" alt=""></div>
             <div class="content-section__text">
-              <p class="content-section__text-default">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non.</p><a class="content-section__link link" href="#">more details</a>
+              <p class="content-section__text-default">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non.</p><a class="content-section__link link popup-link" href="#">more details</a>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@
             <div class="content-section__media"><img src="/img/peoples.jpg" alt=""></div>
             <div class="content-section__text">
               <p class="content-section__text-bold">We strive to improve life by utilising nature’s secret ingredients and making organic CBD products of the highest quality accessible to everyone</p>
-              <p class="content-section__text-small">Growing up with alpine mountain landscape and crystal-clear lakes, we see ourselves as children of nature. From an early age we had a close relationship with our land and agriculture. The regular visits to the farm have taught us the importance of taking care of nature. This is why we stand for organic and sustainable cultivation</p><a class="content-section__link link" href="#">more details</a>
+              <p class="content-section__text-small">Growing up with alpine mountain landscape and crystal-clear lakes, we see ourselves as children of nature. From an early age we had a close relationship with our land and agriculture. The regular visits to the farm have taught us the importance of taking care of nature. This is why we stand for organic and sustainable cultivation</p><a class="content-section__link link popup-link" href="#">more details</a>
             </div>
           </div>
         </div>
@@ -121,7 +121,23 @@
         </div>
       </footer>
     </div>
-  </div><a class="fix-button" href="#" id="fix-button">Ask for more details</a>
+  </div><a class="fix-button popup-link" href="#" id="fix-button">Ask for more details</a>
+  <div class="popup" id="popup">
+    <div class="popup__overlay">
+      <div class="popup__container">
+        <div class="popup__close" id="popup-close"></div>
+        <div class="contact contact--popup">
+          <h2 class="contact__title">Ask for more details</h2>
+          <form action="#"><input id="name" type="text" name="name" placeholder="Name*"><input id="email" type="text" name="email" placeholder="E-mail*"><select id="subject">
+              <option value="0" disabled selected>Subject*</option>
+              <option value="1">Example 1</option>
+              <option value="2">Example 2</option>
+              <option value="3">Example 3</option>
+            </select><textarea id="message" name="message" cols="30" rows="5" placeholder="Message*"></textarea><input type="submit" value="Send"></form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="/plugins/jquery/jquery-3.5.0.min.js"></script>
   <script src="/plugins/owl/owl.carousel.min.js"></script>
   <script src="js/vendors.min.js"></script>
