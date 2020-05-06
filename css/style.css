@@ -55,6 +55,44 @@ body {
 .owl-nav button {
   outline: none; }
 
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span, .owl-carousel button.owl-dot span {
+  position: absolute;
+  font-size: 0;
+  line-height: 0;
+  width: 33px;
+  height: 2px;
+  top: 50%;
+  margin-top: -1px;
+  background: #000;
+  left: 21px; }
+  .owl-carousel .owl-nav button.owl-next span::before, .owl-carousel .owl-nav button.owl-next span::after, .owl-carousel .owl-nav button.owl-prev span::before, .owl-carousel .owl-nav button.owl-prev span::after, .owl-carousel button.owl-dot span::before, .owl-carousel button.owl-dot span::after {
+    position: absolute;
+    content: '';
+    width: 17px;
+    height: 2px;
+    top: -7px;
+    left: 18px;
+    background-color: #000;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .owl-carousel .owl-nav button.owl-next span::after, .owl-carousel .owl-nav button.owl-prev span::after, .owl-carousel button.owl-dot span::after {
+    top: 7px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
+.owl-carousel .owl-nav button.owl-prev span {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+@media (max-width: 480px) {
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    width: 20px;
+    height: 20px;
+    border: none; }
+  .owl-theme .owl-dots .owl-dot span {
+    padding: 0;
+    margin: 0; } }
+
 .page__content {
   margin-bottom: 100px; }
 
@@ -638,6 +676,8 @@ body {
     width: 48%; } }
 
 @media (max-width: 480px) {
+  .slider-section__list {
+    padding-bottom: 0; }
   .slider-section__item--noslider {
     width: 100%; } }
 
@@ -780,6 +820,7 @@ body {
     width: 90%; } }
 
 .fix-button {
+  display: none;
   position: fixed;
   right: -71px;
   top: 50%;
@@ -794,6 +835,8 @@ body {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   z-index: 1; }
+  .fix-button--active {
+    display: block; }
 
 @media (max-width: 480px) {
   .fix-button {
