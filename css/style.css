@@ -420,7 +420,8 @@ body {
     .content-section__text-default {
       margin-top: 0;
       font-size: 18px;
-      font-weight: 600; }
+      font-weight: 600;
+      letter-spacing: 0.03em; }
       .content-section__text-default--forgotten-title-because-maria {
         margin-top: auto;
         margin-bottom: auto; }
@@ -432,7 +433,8 @@ body {
       margin-top: 0;
       font-family: "HelveticaNeueLT-Thin", sans-serif;
       font-size: 16px;
-      font-weight: 600; }
+      font-weight: 600;
+      letter-spacing: 0.03em; }
   .content-section__link {
     margin-top: auto;
     margin-bottom: -8px; }
@@ -800,6 +802,16 @@ body {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   z-index: 1; }
+
+@media (max-width: 480px) {
+  .fix-button {
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: -65px;
+    text-align: center;
+    -webkit-transform: none;
+            transform: none; } }
 
 .popup {
   display: none;
