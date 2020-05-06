@@ -312,10 +312,10 @@ body {
   background-size: cover;
   color: #fff;
   margin-bottom: 70px;
-  padding: 396px 0 85px;
+  padding: 21vw 0 4vw;
   z-index: 2; }
   .heading--inner {
-    padding-bottom: 40px; }
+    padding-bottom: 2vw; }
   .heading__container {
     max-width: 1170px;
     margin: 0 auto;
@@ -333,22 +333,14 @@ body {
     width: 80%;
     margin: 0; }
     .heading__promo--title {
-      margin-bottom: 30px; }
+      margin-bottom: 1.7vw; }
   .heading__breadcrumbs {
     font-family: "Roboto-Light", sans-serif;
     font-size: 16px; }
 
-@media (max-width: 992px) {
-  .heading {
-    padding: 20vw 0 5vw; }
-    .heading__title {
-      font-size: 2vw; }
-    .heading__promo {
-      font-size: 5vw; } }
-
 @media (max-width: 768px) {
   .heading {
-    padding: 30vw 0 10vw; }
+    padding: 40vw 0 10vw; }
     .heading__title {
       font-size: 2vw; }
     .heading__promo {
