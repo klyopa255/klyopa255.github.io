@@ -583,7 +583,9 @@ body {
   .slider-section__text {
     font-family: "HelveticaNeueLT-Thin", sans-serif;
     font-size: 18px;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.03em; }
   .slider-section__list {
     margin: 0;
     padding: 0;
