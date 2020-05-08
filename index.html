@@ -1,145 +1,234 @@
 <!DOCTYPE html>
-<html class="page  no-js" lang="en">
+<html class="page  no-js" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="/plugins/owl/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="/plugins/owl/assets/owl.theme.default.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/owl/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
 </head>
 
-<body><noscript>You have javascript disabled. It scares.</noscript>
-  <div class="page__inner">
-    <header class="page__header header">
-      <div class="header__container">
-        <div class="header__logo"><a class="header__logo-link" href="/">
-            <div class="header__logo-img"><img src="/img/swopa_logo.png" alt=""></div>
-          </a></div>
-        <nav class="header__nav main-nav">
+<body><noscript>У вас отключен JavaScript. Это пугает.</noscript>
+  <div class="page">
+    <header class="page-header">
+      <div class="page-header__container">
+        <div class="logo"><a class="logo__link" href="/"><img src="/img/logo.png" alt=""></a></div>
+        <nav class="main-nav main-nav--mobile">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="/wholesale.html">Wholesale</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="/private-label.html">Private Label</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="/bulk.html">Bulk</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="/our-team.html">Our team</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="/about-us.html">About us</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="/contact.html">Contact</a></li>
-          </ul><button class="main-nav__button">Open/close navigation list</button>
+            <li class="main-nav__item main-nav__item--current" data-name="wellcome" data-num="0"><a class="main-nav__link" href="#wellcome">Главная</a></li>
+            <li class="main-nav__item" data-name="about" data-num="1"><a class="main-nav__link" href="#about">О нас</a></li>
+            <li class="main-nav__item" data-name="product" data-num="2"><a class="main-nav__link" href="#product">Продукт</a></li>
+            <li class="main-nav__item" data-name="advantages" data-num="3"><a class="main-nav__link" href="#advantages">Преимущества</a></li>
+            <li class="main-nav__item" data-name="road-map" data-num="4"><a class="main-nav__link" href="#road-map">Дорожная карта клуба</a></li>
+            <li class="main-nav__item" data-name="faq" data-num="5"><a class="main-nav__link" href="#faq">FAQ</a></li>
+            <li class="main-nav__item" data-name="contacts" data-num="6"><a class="main-nav__link" href="#contacts">Контакты</a></li>
+          </ul>
         </nav>
+        <div class="lang"><span class="lang__current">ru</span>
+          <ul class="lang__list">
+            <li class="lang__item lang__item--current" data-name="ru">ru</li>
+            <li class="lang__item" data-name="en">en</li>
+            <li class="lang__item" data-name="bu">bu</li>
+            <li class="lang__item" data-name="gu">gu</li>
+          </ul>
+        </div><button class="main-nav__button"></button>
       </div>
     </header>
-    <div class="page__content">
-      <section class="heading" style="background-image: url('/img/bg.jpg');">
-        <div class="heading__container">
-          <h1 class="heading__title">Welcome</h1>
-          <p class="heading__promo">Your trusted Partner & Supplier for 100% Swiss Organic CBD</p>
-        </div>
-      </section>
-      <section class="content-section content-section--low-margin">
-        <div class="content-section__container">
-          <h2 class="content-section__title">What we do and offer</h2>
-          <div class="content-section__flex-container">
-            <div class="content-section__media"><iframe height="315" src="https://www.youtube.com/embed/Vu1LCN8RcjU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-            <div class="content-section__text">
-              <p class="content-section__text-default">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="cards">
-        <div class="cards__container">
-          <ul class="cards__list">
-            <li class="cards__item"><a class="cards__link" href="/wholesale.html">
-                <div class="cards__img"><img src="/img/bottles.png" alt=""></div>
-                <h3 class="cards__title">Wholesale</h3>
-              </a></li>
-            <li class="cards__item"><a class="cards__link" href="/private-label.html">
-                <div class="cards__img"><img src="/img/bottles2.png" alt=""></div>
-                <h3 class="cards__title">White/private label</h3>
-              </a></li>
-            <li class="cards__item"><a class="cards__link" href="/bulk.html">
-                <div class="cards__img"><img src="/img/maria.png" alt=""></div>
-                <h3 class="cards__title">Bulk</h3>
-              </a></li>
-          </ul>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="content-section__container">
-          <h2 class="content-section__title">Our USPs</h2>
-          <div class="content-section__flex-container">
-            <div class="content-section__media"><img src="/img/rails.jpg" alt=""></div>
-            <div class="content-section__text">
-              <p class="content-section__text-default">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non.</p><a class="content-section__link link popup-link" href="#">more details</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="content-section__container">
-          <h2 class="content-section__title">Who we are</h2>
-          <div class="content-section__flex-container">
-            <div class="content-section__media"><img src="/img/peoples.jpg" alt=""></div>
-            <div class="content-section__text">
-              <p class="content-section__text-bold">We strive to improve life by utilising nature’s secret ingredients and making organic CBD products of the highest quality accessible to everyone</p>
-              <p class="content-section__text-small">Growing up with alpine mountain landscape and crystal-clear lakes, we see ourselves as children of nature. From an early age we had a close relationship with our land and agriculture. The regular visits to the farm have taught us the importance of taking care of nature. This is why we stand for organic and sustainable cultivation</p><a class="content-section__link link popup-link" href="#">more details</a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="page__container">
+      <main class="page__main">
+        <ul class="sections__list">
+          <li class="sections__item" id="wellcome" data-name="wellcome" data-num="0">
+            <section class="section section--top" style="background-image:url('/img/bg1.jpg');">
+              <div class="section__container section__container--nopadding">
+                <h1 class="section__title">Insight Business Club</h1>
+                <p class="section__promo">Международное сообщество для бизнеса и инвестиций</p><a class="button section__button" href="#">Узнать больше</a>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="about" data-name="about" data-num="1">
+            <section class="section">
+              <div class="section__img"><img src="/img/hands.jpg" alt=""></div>
+              <div class="section__container section__container--about">
+                <h2 class="section__title">О нас</h2>
+                <h3>Наша цель</h3>
+                <p class="section__text">Помощь опытным предпринимателям и инвесторам находить друг друга</p>
+                <h3>Наша миссия</h3>
+                <p class="section__text section__text--nomargin">Объединение материальных и интеллектуальных ресурсов для получения прибыли в любых условиях мировой экономики</p>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="product" data-name="product" data-num="2">
+            <section class="section">
+              <div class="section__img"><img src="/img/kollash.jpg" alt=""></div>
+              <div class="section__container section__container--product">
+                <h2 class="section__title">Продукт</h2>
+                <h3>Направление инвестиций</h3>
+                <p class="section__text">На сегодняшний день мы выбрали первым направлением инвестиции в стабильно работающее предприятие горнодобывающей промышленности в Африке.</p><a class="button section__button" href="#">Узнать подроюнее</a>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="advantages" data-name="advantages" data-num="3">
+            <section class="section">
+              <div class="section__img"><img src="/img/stone.jpg" alt=""></div>
+              <div class="section__container section__container--advantages">
+                <h2 class="section__title">Наши преимущества</h2>
+                <ul class="slider owl-carousel owl-theme">
+                  <li class="slider__item">
+                    <h3>Избирательность и аналитика</h3>
+                    <p class="section__text">Качественный отбор перспективных проектов специалистами из разных областей экономики, совместный анализ рисков инвесторами и партнерами сообщества. Продолжительная успешная история работы выбранных бизнесов для инвестиций.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>Международный совместный опыт инвестиций</h3>
+                    <p class="section__text">Возможность инвестировать совместно с опытными инвесторами из различных отраслей экономики. Получение инвестиционного опыта в различных отраслевых направлениях.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>Стабильность и устойчивость</h3>
+                    <p class="section__text">Устойчивая работа проектов сообщества даже в период кризиса мировой экономики. Долгосрочные планы по развитию.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>Полная поддержка партнера клуба</h3>
+                    <p class="section__text">Техническая, маркетинговая, бухгалтерская, административная поддержка, а также рекомендации от юристов-инвесторов, которые являются частью сообщества.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>Юридическая чистота и страхование</h3>
+                    <p class="section__text">Юридический анализ сделок и инвестиционного процесса. Страхование сделок.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>Отсутствие членского взноса и комиссий за вход и выход</h3>
+                    <p class="section__text">Целью клуба является увеличение совместного достатка его членов. На данном этапе членские взносы и иные платежи не рассматриваются.</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="road-map" data-name="road-map" data-num="4">
+            <section class="section">
+              <div class="section__img"><img src="/img/top-view.jpg" alt=""></div>
+              <div class="section__container section__container--map">
+                <h2 class="section__title">Дорожная карта клуба</h2>
+                <ul class="slider owl-carousel owl-theme">
+                  <li class="slider__item">
+                    <h3>1. Финансирования товарных сделок</h3>
+                    <p class="section__text">Клуб на данный момент сосредоточен на работе с уже действующими предприятиями, которые будут наиболее устойчивыми в период кризиса и возможной предстоящей экономической рецессии.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>2. Финансирование переработкис металлов платиновой группы</h3>
+                    <p class="section__text">На стадии готовности находится проект по переработке металлов платиновой группы, Клуб переходит на работу по нему, когда достигнут необходимый объём инвестиций для проект. Доходность по нему предполагается выше, чем по этапу 1.</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>3. Создание новых совместных предприятий по сырьевому рынку</h3>
+                    <p class="section__text">По мере активного расширения клуба и привлечения значительных денежных сумм, мы планируем перестраивать нашу работу на более тесное взаимодействие с торговыми партнерами (создание совместных предприятий).</p>
+                  </li>
+                  <li class="slider__item">
+                    <h3>4. Создание международного устойчивого холдинга</h3>
+                    <p class="section__text">По вышеуказанным направлениям мы ориентированы на создание международного холдинга по торговле полезными ископаемыми, драгоценными металлами, металлами платиновой группы и другими ценными ресурсами, которые будут востребованы на рынке в любые экономические условия.</p>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="faq" data-name="faq" data-num="5">
+            <section class="section">
+              <div class="section__container section__container--faq">
+                <h2 class="section__title">FAQ</h2>
+                <ul class="accordion">
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">Что такое бизнес-клуб Инсайт?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Бизнес-клуб Инсайт (Инсайт) – это международное сообщество людей, целью которого является инвестирование в перспективные проекты путем объединения своих денежных средств для получения стабильного пассивного дохода.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">Есть ли членский взнос для вступления в клуб?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Одним из главных наших преимуществ является то, что вступление в клуб не подразумевает никакого членского взноса. При дальнейшем росте сообщества участников введение членского взноса целесообразно с целью использования бюджета клуба для организации совместных встреч и выездных мероприятий клуба, рекламы и маркетингового продвижения клуба. Обо всех нововведениях заранее будет сообщено на информационных ресурсах клуба.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">Какая цель основателей клуба?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Основная цель клуба и его основная ценность – это создание сообщества опытных инвесторов из разных точек земного шара для осуществления совместных инвестиций в проекты, приносящие стабильный пассивный доход даже в кризис.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">Зачем основатели организовали клуб, если итак от своих инвестиций они получают стабильный доход?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Многие высокодоходные проекты предполагают высокий порог входа, либо не имеют возможности работать с частными лицами. Клуб решает эту проблему путем создания специальных совместных партнерств для объединения своего сообщества инвесторов в единый пул и получения доступа к перспективным проектам.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">За счет чего формируется доход члена клуба?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Доход члена клуба формируется за счет выплаты ему соответствующей части прибыли, получаемой партнерством (limited partnership, место регистрации: Великобритания) от софинансирования торговой деятельности зарубежных компаний, работающих на различных сырьевых рынках.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="accordion-list__item">
+                    <div class="accordion-item false">
+                      <div class="accordion-item__line">
+                        <h3 class="accordion-item__title">Выплачивает ли партнерство проценты на средства инвесторов или сделанные инвестиции?</h3><span class="accordion-item__icon"></span>
+                      </div>
+                      <div class="accordion-item__inner">
+                        <div class="accordion-item__content">
+                          <p class="accordion-item__paragraph">Партнерство не является банком и не оказывает услуг по размещению депозитов или инвестированию в ценные бумаги. Партнерство не начисляет процентов, оно дает возможность совместно финансировать торговые сделки предприятий и получать от них доход. Партнерство выплачивает только доход, соответствующий доле инвестора в партнерстве.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </li>
+          <li class="sections__item" id="contacts" data-name="contacts" data-num="6">
+            <section class="section">
+              <div class="section__container">
+                <h2 class="section__title">Контакты</h2>
+                <p class="section__promo">Международное сообщество для бизнеса и инвестиций</p><a class="button section__button" href="#">Узнать больше</a>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </main>
     </div>
-    <div class="page__footer-wrapper">
-      <footer class="page-footer">
-        <div class="page-footer__container">
-          <div class="page-footer__text-section">
-            <h2 class="page-footer__title">Say hello!</h2>
-            <p class="page-footer__text">Swiss Organic Partners AG Isenrietstrasse 19 CH-8617 Mönchaltorf<a class="page-footer__link" href="mailto:hello@swopa.ch">hello@swopa.ch</a></p>
-          </div>
-          <div class="page-footer__partners-section partners">
-            <ul class="partners__list">
-              <li class="partners__item"><a class="partners__link" href="#">
-                  <div class="partners__img"><img src="/img/partners1.jpg" alt=""></div>
-                </a></li>
-              <li class="partners__item"><a class="partners__link" href="#">
-                  <div class="partners__img"><img src="/img/partners2.jpg" alt=""></div>
-                </a></li>
-              <li class="partners__item"><a class="partners__link" href="#">
-                  <div class="partners__img"><img src="/img/partners3.jpg" alt=""></div>
-                </a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="page-footer__copyright">
-          <div class="page-footer__copyright-container">
-            <p class="page-footer__copyright-text">© Copyright - SWISS ORGANIC PARTNERS AG</p><a class="page-footer__copyright-link" href="#">Privacy Policy</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </div><a class="fix-button popup-link" href="#" id="fix-button">Ask for more details</a>
-  <div class="popup" id="popup">
-    <div class="popup__overlay">
-      <div class="popup__container">
-        <div class="popup__close" id="popup-close"></div>
-        <div class="contact contact--popup">
-          <h2 class="contact__title">Ask for more details</h2>
-          <form action="#"><input id="name" type="text" name="name" placeholder="Name*"><input id="email" type="text" name="email" placeholder="E-mail*"><select id="subject">
-              <option value="0" disabled selected>Subject*</option>
-              <option value="1">Example 1</option>
-              <option value="2">Example 2</option>
-              <option value="3">Example 3</option>
-            </select><textarea id="message" name="message" cols="30" rows="5" placeholder="Message*"></textarea><input type="submit" value="Send"></form>
-        </div>
-      </div>
-    </div>
+    <p>Подвал</p>
   </div>
-  <script src="/plugins/jquery/jquery-3.5.0.min.js"></script>
-  <script src="/plugins/owl/owl.carousel.min.js"></script>
+  <script src="plugins/jquery/jquery-3.5.0.min.js"></script>
+  <script src="plugins/owl/owl.carousel.min.js"></script>
   <script src="js/vendors.min.js"></script>
   <script src="js/script.min.js"></script>
 </body>
