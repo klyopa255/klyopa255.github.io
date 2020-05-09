@@ -203,7 +203,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .accordion h3.accordion-item__title {
   font-family: "MyriadPro-Regular", sans-serif;
@@ -308,6 +309,9 @@ body {
     background-color: #000;
     z-index: 3; }
 
+.logo {
+  z-index: 3; }
+
 .main-nav {
   display: none; }
   .main-nav__list {
@@ -378,13 +382,28 @@ body {
       .main-nav--mobile .main-nav__item--current a {
         color: #4196ff; }
 
+@media (min-width: 1024px) {
+  .main-nav {
+    display: block;
+    padding-right: 5vw;
+    z-index: 2; }
+    .main-nav__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    .main-nav__item a {
+      color: #fff; } }
+
 .lang {
   display: none;
   position: relative;
   margin-right: 60px;
   text-transform: uppercase;
   font-size: 12px;
-  padding: 8px 9px; }
+  padding: 8px 9px;
+  z-index: 3; }
   .lang__current {
     text-decoration: underline; }
   .lang__list {
@@ -408,13 +427,21 @@ body {
   .lang--active {
     display: block; }
 
+@media (min-width: 1024px) {
+  .lang {
+    display: block; } }
+
 .sections__list {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-.sections__item--active {
-  display: block; }
+@media (min-width: 1024px) {
+  .sections__item {
+    display: none;
+    height: 100vh; }
+    .sections__item--active {
+      display: block; } }
 
 .section {
   background: #000 center no-repeat;
@@ -504,15 +531,54 @@ body {
     margin-bottom: 32px; }
     .section__text--nomargin {
       margin-bottom: 0; }
-  .section__img {
+  .section__img::after {
+    display: block;
+    content: '';
+    padding-top: 80%; }
+  .section__img--about {
+    background: url(/img/hands.jpg) center no-repeat;
+    background-size: cover; }
+  .section__img--product {
+    background: url(/img/kollash.jpg) center no-repeat;
+    background-size: cover; }
+  .section__img--advantages {
+    background: url(/img/stone.jpg) center no-repeat;
+    background-size: cover; }
+  .section__img--map {
+    background: url(/img/top-view.jpg) center no-repeat;
+    background-size: cover; }
+  .section__img--contacts {
+    background: url(/img/mabila.jpg) center no-repeat;
+    background-size: cover; }
+  .section--top {
+    padding-top: 120px;
+    background-image: url(/img/bg1.jpg); }
+
+@media (min-width: 1024px) {
+  .section {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    .section__img img {
-      width: 100%;
-      height: auto; }
-  .section--top {
-    padding-top: 120px; }
+    display: flex;
+    height: 100%; }
+    .section__img {
+      width: 50%;
+      min-width: 50%; }
+      .section__img--about {
+        background-image: url(/img/hands-d.jpg); }
+      .section__img--product {
+        background-image: url(/img/kollash-d.jpg); }
+      .section__img--advantages {
+        background-image: url(/img/stone-d.jpg); }
+      .section__img--map {
+        background-image: url(/img/top-view-d.jpg); }
+      .section__img--contacts {
+        background-image: url(/img/mabila-d.jpg); }
+    .section__container {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .section--top {
+      background-image: url(/img/bg1-d.jpg); } }
 
 .button {
   display: inline-block;
