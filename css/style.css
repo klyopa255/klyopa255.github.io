@@ -767,10 +767,30 @@ body {
 
 @media (min-width: 1024px) {
   .button {
-    display: block;
+    position: relative;
     width: 12.25vw;
     font-size: 1.04vw;
-    padding: 0.7vw 0; }
+    padding: 0.7vw 0;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s; }
+    .button span {
+      position: relative;
+      z-index: 2; }
+    .button::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 1;
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s; }
+    .button:hover {
+      color: #000; }
+      .button:hover::after {
+        width: 100%; }
     .button--large {
       width: 18.7vw; } }
 
@@ -869,8 +889,9 @@ body {
   color: #fff;
   padding-bottom: 40px;
   margin-bottom: 20px;
-  -webkit-transition: padding-bottom 0.5s, padding-top 0.5s;
-  transition: padding-bottom 0.5s, padding-top 0.5s; }
+  opacity: 0.8;
+  -webkit-transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s;
+  transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s; }
   .nav-button::after {
     position: absolute;
     content: '';
@@ -883,7 +904,8 @@ body {
     transition: bottom 0.5s; }
   .nav-button:hover {
     padding-bottom: 0;
-    padding-top: 40px; }
+    padding-top: 40px;
+    opacity: 1; }
     .nav-button:hover::after {
       bottom: 30px; }
   .nav-button--top {
