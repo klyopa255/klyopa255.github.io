@@ -444,13 +444,30 @@ body {
     .main-nav__item {
       margin-right: 1.56vw; }
       .main-nav__item a {
+        position: relative;
         font-family: "MyriadPro-Regular", sans-serif;
         font-size: 0.85vw;
         text-transform: uppercase;
         color: #c7c7c7;
-        text-decoration: none; }
+        text-decoration: none;
+        padding-bottom: 0.53vw; }
+        .main-nav__item a::after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 0.1vw;
+          left: 0;
+          bottom: 0;
+          background-color: #c7c7c7;
+          -webkit-transition: width 0.5s;
+          transition: width 0.5s; }
+        .main-nav__item a:hover::after {
+          width: 100%; }
       .main-nav__item--current a {
         color: #fff; }
+        .main-nav__item--current a::after {
+          width: 100%;
+          background-color: #fff; }
     .main-nav__button {
       top: 4.1vw;
       right: 8.75vw;
@@ -486,7 +503,11 @@ body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      padding-left: 30vw; } }
+      padding-left: 30vw; }
+    .main-nav--mobile .main-nav__item a::after {
+      background-color: #d7d7d7; }
+    .main-nav--mobile .main-nav__item--current a::after {
+      content: none; } }
 
 .lang {
   display: none;
