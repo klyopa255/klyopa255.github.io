@@ -78,6 +78,30 @@ body {
     margin-top: 200px;
     height: 1px; } }
 
+@-webkit-keyframes from-left {
+  from {
+    margin-left: -200%; }
+  to {
+    margin-left: 0%; } }
+
+@keyframes from-left {
+  from {
+    margin-left: -200%; }
+  to {
+    margin-left: 0%; } }
+
+@-webkit-keyframes from-right {
+  from {
+    margin-left: 200%; }
+  to {
+    margin-left: 0%; } }
+
+@keyframes from-right {
+  from {
+    margin-left: 200%; }
+  to {
+    margin-left: 0%; } }
+
 .owl-theme .owl-nav {
   position: absolute;
   display: -webkit-box;
@@ -617,7 +641,10 @@ body {
     font-size: 45px;
     line-height: 55px;
     text-transform: uppercase;
-    margin: 0 0 25px; }
+    width: 100%;
+    margin: 0 0 25px;
+    -webkit-animation: from-left 1s 1;
+            animation: from-left 1s 1; }
   .section h2 {
     position: relative;
     font-family: "PlayfairDisplay-Black", sans-serif;
@@ -641,8 +668,11 @@ body {
     font-family: "PlayfairDisplay-Medium", sans-serif;
     font-size: 23px;
     line-height: 32px;
+    width: 100%;
     padding-right: 10px;
-    margin-bottom: 75px; }
+    margin-bottom: 75px;
+    -webkit-animation: from-right 1s 1;
+            animation: from-right 1s 1; }
   .section__text {
     font-family: "MyriadPro-Regular", sans-serif;
     font-size: 15px;
@@ -670,8 +700,18 @@ body {
     background: url(/img/mabila.jpg) center no-repeat;
     background-size: cover; }
   .section--top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-top: 120px;
-    background-image: url(/img/bg1.jpg); }
+    background-image: url(/img/bg1.jpg);
+    height: 100vh; }
 
 @media (min-width: 1024px) {
   .section {
