@@ -609,6 +609,7 @@ body {
 
 .section {
   background: #000 center no-repeat;
+  background-image: url(/img/bg1.jpg);
   background-size: cover; }
   .section__container {
     padding: 0 15px;
@@ -734,7 +735,6 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     padding-top: 120px;
-    background-image: url(/img/bg1.jpg);
     height: 100vh; }
 
 @media (min-width: 1024px) {
