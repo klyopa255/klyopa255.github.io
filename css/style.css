@@ -102,6 +102,30 @@ body {
   to {
     margin-left: 0%; } }
 
+@-webkit-keyframes from-top {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+
+@keyframes from-top {
+  from {
+    top: -100%; }
+  to {
+    top: 0; } }
+
+@-webkit-keyframes from-bottom {
+  from {
+    top: 100%; }
+  to {
+    top: 0%; } }
+
+@keyframes from-bottom {
+  from {
+    top: 100%; }
+  to {
+    top: 0%; } }
+
 .owl-theme .owl-nav {
   position: absolute;
   display: -webkit-box;
@@ -718,10 +742,14 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100%; }
+    height: 100%;
+    overflow: hidden; }
     .section__img {
+      position: relative;
       width: 50%;
-      min-width: 50%; }
+      min-width: 50%;
+      -webkit-animation: from-bottom 1s 1;
+              animation: from-bottom 1s 1; }
       .section__img--about {
         background-image: url(/img/hands-d.jpg); }
       .section__img--product {
@@ -742,9 +770,13 @@ body {
       .section__container--nopadding {
         padding-top: 0; }
       .section__container--left {
-        padding: 10vw 3.7vw 0 8.6vw; }
+        padding: 10vw 3.7vw 0 8.6vw;
+        -webkit-animation: from-top 1s 1;
+                animation: from-top 1s 1; }
       .section__container--right {
-        padding: 10vw 8.6vw 0 5.2vw; }
+        padding: 10vw 8.6vw 0 5.2vw;
+        -webkit-animation: from-top 1s 1;
+                animation: from-top 1s 1; }
       .section__container--about::after {
         top: -2%;
         left: 17.5%; }
