@@ -370,16 +370,6 @@ body {
     font-size: 1.04vw;
     line-height: 1.5em; } }
 
-.page {
-  background-color: blue; }
-
-@media (min-width: 1024px) {
-  .page {
-    width: 100vw;
-    height: 100vh;
-    background: url(/img/bg1-d.jpg) center no-repeat;
-    background-size: cover; } }
-
 .page-header {
   position: absolute;
   top: 0;
@@ -865,7 +855,9 @@ body {
     .section--top {
       background: url(/img/bg1-d.jpg) center no-repeat;
       background-size: cover;
-      padding-top: 18.25vw; }
+      padding-top: 18.25vw;
+      -webkit-animation: from-top 1s 1;
+              animation: from-top 1s 1; }
     .section--reverse {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
