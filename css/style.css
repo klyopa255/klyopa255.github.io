@@ -75,32 +75,32 @@ body {
     margin-bottom: 10vw;
     height: 1px; }
   .faq-bottom {
-    margin-top: 200px;
+    margin-top: 10vw;
     height: 1px; } }
 
 @-webkit-keyframes from-left {
   from {
-    margin-left: -200%; }
+    left: -100%; }
   to {
-    margin-left: 0%; } }
+    left: 0%; } }
 
 @keyframes from-left {
   from {
-    margin-left: -200%; }
+    left: -100%; }
   to {
-    margin-left: 0%; } }
+    left: 0%; } }
 
 @-webkit-keyframes from-right {
   from {
-    margin-left: 200%; }
+    left: 100%; }
   to {
-    margin-left: 0%; } }
+    left: 0%; } }
 
 @keyframes from-right {
   from {
-    margin-left: 200%; }
+    left: 100%; }
   to {
-    margin-left: 0%; } }
+    left: 0%; } }
 
 @-webkit-keyframes from-top {
   from {
@@ -125,6 +125,18 @@ body {
     top: 100%; }
   to {
     top: 0%; } }
+
+.title-animation {
+  position: relative;
+  width: 100%;
+  -webkit-animation: from-left 1s 1;
+          animation: from-left 1s 1; }
+
+.content-animation {
+  position: relative;
+  width: 100%;
+  -webkit-animation: from-right 1s 1;
+          animation: from-right 1s 1; }
 
 .owl-theme .owl-nav {
   position: absolute;
@@ -438,13 +450,21 @@ body {
       height: 0px;
       background: transparent;
       -webkit-box-shadow: 0px 0px 0px 1px #fff, 0px 10px 0px 1px #fff, 0px 22px 0px 1px #fff;
-              box-shadow: 0px 0px 0px 1px #fff, 0px 10px 0px 1px #fff, 0px 22px 0px 1px #fff; }
+              box-shadow: 0px 0px 0px 1px #fff, 0px 10px 0px 1px #fff, 0px 22px 0px 1px #fff;
+      -webkit-transition: background-color 1s, -webkit-box-shadow 1s, -webkit-transform 1s;
+      transition: background-color 1s, -webkit-box-shadow 1s, -webkit-transform 1s;
+      transition: box-shadow 1s, background-color 1s, transform 1s;
+      transition: box-shadow 1s, background-color 1s, transform 1s, -webkit-box-shadow 1s, -webkit-transform 1s; }
     .main-nav__button--active {
       width: 29px;
       height: 29px;
       border-radius: 50%;
       -webkit-box-shadow: 0 0 1px 2px #939393;
-              box-shadow: 0 0 1px 2px #939393; }
+              box-shadow: 0 0 1px 2px #939393;
+      -webkit-transition: border-radius 1s, -webkit-box-shadow 1s;
+      transition: border-radius 1s, -webkit-box-shadow 1s;
+      transition: box-shadow 1s, border-radius 1s;
+      transition: box-shadow 1s, border-radius 1s, -webkit-box-shadow 1s; }
       .main-nav__button--active::after, .main-nav__button--active::before {
         position: absolute;
         content: '';
@@ -456,11 +476,14 @@ body {
         left: 7.5px;
         background-color: #fff;
         -webkit-transform: rotate(45deg);
-                transform: rotate(45deg); }
+                transform: rotate(45deg);
+        -webkit-transition: width 1s transform 1s;
+        transition: width 1s transform 1s; }
       .main-nav__button--active::before {
         -webkit-transform: rotate(-45deg);
                 transform: rotate(-45deg); }
   .main-nav--active {
+    display: block;
     opacity: 1;
     z-index: 0; }
   .main-nav--mobile {
@@ -683,10 +706,7 @@ body {
     font-size: 45px;
     line-height: 55px;
     text-transform: uppercase;
-    width: 100%;
-    margin: 0 0 25px;
-    -webkit-animation: from-left 1s 1;
-            animation: from-left 1s 1; }
+    margin: 0 0 25px; }
   .section h2 {
     position: relative;
     font-family: "PlayfairDisplay-Black", sans-serif;
@@ -712,9 +732,7 @@ body {
     line-height: 32px;
     width: 100%;
     padding-right: 10px;
-    margin-bottom: 75px;
-    -webkit-animation: from-right 1s 1;
-            animation: from-right 1s 1; }
+    margin-bottom: 75px; }
   .section__text {
     font-family: "MyriadPro-Regular", sans-serif;
     font-size: 15px;
@@ -810,7 +828,9 @@ body {
         left: -4%; }
       .section__container--faq {
         overflow-y: auto;
-        padding: 0 25vw; }
+        padding: 0 25vw;
+        -webkit-animation: from-top 1s 1;
+                animation: from-top 1s 1; }
       .section__container--contacts::after {
         top: -2%;
         left: -27%; }
