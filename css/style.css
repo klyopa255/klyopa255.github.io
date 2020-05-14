@@ -373,6 +373,13 @@ body {
 .page {
   background-color: blue; }
 
+@media (min-width: 1024px) {
+  .page {
+    width: 100vw;
+    height: 100vh;
+    background: url(/img/bg1-d.jpg) center no-repeat;
+    background-size: cover; } }
+
 .page-header {
   position: absolute;
   top: 0;
