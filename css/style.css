@@ -75,7 +75,7 @@ body {
     margin-bottom: 10vw;
     height: 1px; }
   .faq-bottom {
-    margin-top: 10vw;
+    margin-top: 8vw;
     height: 1px; } }
 
 @-webkit-keyframes from-left {
@@ -137,6 +137,18 @@ body {
     top: 100%; }
   to {
     top: 0%; } }
+
+@-webkit-keyframes nav-button {
+  from {
+    top: 71px; }
+  to {
+    top: 0; } }
+
+@keyframes nav-button {
+  from {
+    top: 71px; }
+  to {
+    top: 0; } }
 
 .title-animation {
   position: relative;
@@ -711,11 +723,14 @@ body {
       .section__container--contacts::after {
         content: 'contacts'; }
   .section h1 {
+    position: relative;
     font-family: "PlayfairDisplay-ExtraBold", sans-serif;
     font-size: 45px;
     line-height: 55px;
     text-transform: uppercase;
-    margin: 0 0 25px; }
+    margin: 0 0 25px;
+    -webkit-animation: from-left 1s 1;
+            animation: from-left 1s 1; }
   .section h2 {
     position: relative;
     font-family: "PlayfairDisplay-Black", sans-serif;
@@ -736,12 +751,15 @@ body {
     font-size: 23px;
     line-height: 32px; }
   .section__promo {
+    position: relative;
     font-family: "PlayfairDisplay-Medium", sans-serif;
     font-size: 23px;
     line-height: 32px;
     width: 100%;
     padding-right: 10px;
-    margin-bottom: 75px; }
+    margin-bottom: 75px;
+    -webkit-animation: from-right 1s 1;
+            animation: from-right 1s 1; }
   .section__text {
     font-family: "MyriadPro-Regular", sans-serif;
     font-size: 15px;
@@ -1019,8 +1037,9 @@ body {
   padding-bottom: 40px;
   margin-bottom: 20px;
   opacity: 0.8;
-  -webkit-transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s;
-  transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s; }
+  top: 0;
+  -webkit-transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s, top 1s;
+  transition: padding-bottom 0.5s, padding-top 0.5s, opacity 0.5s, top 1s; }
   .nav-button::after {
     position: absolute;
     content: '';
@@ -1047,6 +1066,9 @@ body {
       padding-top: 0; }
       .nav-button--top:hover::after {
         bottom: 0; }
+  .nav-button--scroll {
+    position: relative;
+    top: 4vw; }
 
 @media (min-width: 1024px) {
   .nav-button--active {
