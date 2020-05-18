@@ -741,6 +741,8 @@ body {
       background: linear-gradient(30deg, #245472 10%, #407ca4 90%); }
       .section__container--contacts::after {
         content: 'contacts'; }
+  .section__title {
+    z-index: 1; }
   .section h1 {
     position: relative;
     font-family: "PlayfairDisplay-ExtraBold", sans-serif;
