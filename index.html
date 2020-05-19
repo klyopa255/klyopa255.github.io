@@ -260,17 +260,42 @@
                     <li class="social__item"><a class="social__link social__link--insta" href="#insta">Instagramm</a></li>
                     <li class="social__item"><a class="social__link social__link--in" href="#linkedin">Linkedin</a></li>
                     <li class="social__item"><a class="social__link social__link--fb" href="#fb">Fb</a></li>
-                  </ul><a class="button section__button" href="#"><span>Перезвоните мне</span></a>
+                  </ul><a class="button section__button" href="#" id="contact"><span>Перезвоните мне</span></a>
                 </div>
               </div>
             </section>
           </li>
         </ul>
         <div class="flex-container flex-container--center flex-container--fixed-bottom"><a class="nav-button nav-button--next" href="#">Смотрите дальше</a><a class="nav-button nav-button--top" href="#">Наверх</a></div>
+        <div class="popup" id="popup">
+          <div class="popup__container">
+            <div class="popup__button main-nav__button main-nav__button--active"></div>
+            <form class="contact-form" action="#">
+              <div class="contact-form__input-wrapper"><label class="contact-form__label" for="name">Имя</label><input class="contact-form__input" id="name" type="text" name="name" autocomplete="off"></div>
+              <div class="contact-form__input-wrapper"><label class="contact-form__label" for="phone">Телефон</label><input class="contact-form__input" id="phone" type="phone" name="phone" autocomplete="off"></div>
+              <div class="contact-form__input-wrapper"><label class="contact-form__label" for="email">E-mail</label><input class="contact-form__input" id="email" type="text" name="email" autocomplete="off"></div>
+              <div class="contact-form__input-wrapper contact-form__input-wrapper--last contact-form__input-wrapper--select">
+                <div class="contact-form__select-mark"></div><label class="contact-form__label contact-form__label--select" for="country">Страна</label><input class="contact-form__input contact-form__input--select" type="text" id="country" name="country" readonly>
+                <ul class="contact-form__options-list">
+                  <li class="contact-form__options-item" data-name="Россия">Россия</li>
+                  <li class="contact-form__options-item" data-name="Польша">Польша</li>
+                  <li class="contact-form__options-item" data-name="Германия">Германия</li>
+                  <li class="contact-form__options-item" data-name="Франция">Франция</li>
+                  <li class="contact-form__options-item" data-name="Испания">Испания</li>
+                </ul>
+              </div>
+              <div class="contact-form__submit-wrapper"><input class="contact-form__submit" type="submit" value="Отправить"></div>
+            </form>
+          </div>
+        </div>
       </main>
     </div>
   </div>
   <script src="plugins/jquery/jquery-3.5.0.min.js"></script>
+  <script src="plugins/jquery/jquery.inputmask.min.js"></script>
+  <script src="plugins/jquery/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+  <script src="plugins/jquery/inputmask.phone/inputmask.libphonenumber.extensions.min.js"></script>
+  <script src="plugins/jquery/inputmask.phone/phone-codes/phone.min.js"></script>
   <script src="plugins/owl/owl.carousel.min.js"></script>
   <script src="js/vendors.min.js"></script>
   <script src="js/script.min.js"></script>
