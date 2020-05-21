@@ -549,7 +549,6 @@ body {
     display: block;
     opacity: 0;
     z-index: -1;
-    padding-right: 5vw;
     -webkit-transition: opacity 0.5s, z-index 0.5s 1s;
     transition: opacity 0.5s, z-index 0.5s 1s; }
     .main-nav__list {
@@ -1293,6 +1292,8 @@ body {
     line-height: 20px;
     color: #fff;
     text-transform: uppercase; }
+  .contact-form__before-wrapper {
+    display: none; }
 
 @media (min-width: 1024px) {
   .contact-form__input-wrapper {
@@ -1337,6 +1338,14 @@ body {
     height: 50px;
     text-align: center;
     padding-top: 15px;
-    padding-bottom: 15px; } }
+    padding-bottom: 15px; }
+  .contact-form__submit-wrapper:hover {
+    padding-bottom: 30px; }
+  .contact-form__submit {
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 22px; }
+  .contact-form__before-wrapper {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */
